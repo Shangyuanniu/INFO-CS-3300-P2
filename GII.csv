@@ -1,224 +1,189 @@
-,,Value,,Rank
-,Country,2014,,2014
-,VERY HIGH HUMAN DEVELOPMENT,,,
-1,Norway,0.067,,9
-2,Australia,0.11,,19
-3,Switzerland,0.028,,2
-4,Denmark,0.048,,4
-5,Netherlands,0.062,,7
-6,Germany,0.041,,3
-6,Ireland,0.113,,21
-8,United States,0.28,,55
-9,Canada,0.129,,25
-9,New Zealand,0.157,,32
-11,Singapore,0.088,,13
-12,"Hong Kong, China (SAR)",..,,..
-13,Liechtenstein,..,,..
-14,Sweden,0.055,,6
-14,United Kingdom,0.177,,39
-16,Iceland,0.087,,12
-17,Korea (Republic of),0.125,,23
-18,Israel,0.101,,18
-19,Luxembourg,0.1,,17
-20,Japan,0.133,,26
-21,Belgium,0.063,,8
-22,France,0.088,,13
-23,Austria,0.053,,5
-24,Finland,0.075,,11
-25,Slovenia,0.016,,1
-26,Spain,0.095,,16
-27,Italy,0.068,,10
-28,Czech Republic,0.091,,15
-29,Greece,0.146,,29
-30,Estonia,0.164,,33
-31,Brunei Darussalam,..,,..
-32,Cyprus,0.124,,22
-32,Qatar,0.524,,116
-34,Andorra,..,,..
-35,Slovakia,0.164,,33
-36,Poland,0.138,,28
-37,Lithuania,0.125,,23
-37,Malta,0.227,,46
-39,Saudi Arabia,0.284,,56
-40,Argentina,0.376,,75
-41,United Arab Emirates,0.232,,47
-42,Chile,0.338,,65
-43,Portugal,0.111,,20
-44,Hungary,0.209,,42
-45,Bahrain,0.265,,51
-46,Latvia,0.167,,36
-47,Croatia,0.149,,30
-48,Kuwait,0.387,,79
-49,Montenegro,0.171,,37
-,HIGH HUMAN DEVELOPMENT,,,
-50,Belarus,0.151,,31
-50,Russian Federation,0.276,,54
-52,Oman,0.275,,53
-52,Romania,0.333,,64
-52,Uruguay,0.313,,61
-55,Bahamas,0.298,,58
-56,Kazakhstan,0.267,,52
-57,Barbados,0.357,,69
-58,Antigua and Barbuda,..,,..
-59,Bulgaria,0.212,,44
-60,Palau,..,,..
-60,Panama,0.454,,96
-62,Malaysia,0.209,,42
-63,Mauritius,0.419,,88
-64,Seychelles,..,,..
-64,Trinidad and Tobago,0.371,,73
-66,Serbia,0.176,,38
-67,Cuba,0.356,,68
-67,Lebanon,0.385,,78
-69,Costa Rica,0.349,,66
-69,Iran (Islamic Republic of),0.515,,114
-71,Venezuela (Bolivarian Republic of),0.476,,103
-72,Turkey,0.359,,71
-73,Sri Lanka,0.37,,72
-74,Mexico,0.373,,74
-75,Brazil,0.457,,97
-76,Georgia,0.382,,77
-77,Saint Kitts and Nevis,..,,..
-78,Azerbaijan,0.303,,59
-79,Grenada,..,,..
-80,Jordan,0.473,,102
-81,The former Yugoslav Republic of Macedonia,0.164,,33
-81,Ukraine,0.286,,57
-83,Algeria,0.413,,85
-84,Peru,0.406,,82
-85,Albania,0.217,,45
-85,Armenia,0.318,,62
-85,Bosnia and Herzegovina,0.201,,41
-88,Ecuador,0.407,,83
-89,Saint Lucia,..,,..
-90,China,0.191,,40
-90,Fiji,0.418,,87
-90,Mongolia,0.325,,63
-93,Thailand,0.38,,76
-94,Dominica,..,,..
-94,Libya,0.134,,27
-96,Tunisia,0.24,,48
-97,Colombia,0.429,,92
-97,Saint Vincent and the Grenadines,..,,..
-99,Jamaica,0.43,,93
-100,Tonga,0.666,,148
-101,Belize,0.426,,90
-101,Dominican Republic,0.477,,104
-103,Suriname,0.463,,100
-104,Maldives,0.243,,49
-105,Samoa,0.457,,97
-106,Botswana,0.48,,106
-107,Moldova (Republic of),0.248,,50
-108,Egypt,0.573,,131
-109,Turkmenistan,..,,..
-110,Gabon,0.514,,113
-110,Indonesia,0.494,,110
-112,Paraguay,0.472,,101
-113,"Palestine, State of",..,,..
-114,Uzbekistan,..,,..
-115,Philippines,0.42,,89
-116,El Salvador,0.427,,91
-116,South Africa,0.407,,83
-116,Viet Nam,0.308,,60
-119,Bolivia (Plurinational State of),0.444,,94
-120,Kyrgyzstan,0.353,,67
-121,Iraq,0.539,,123
-122,Cabo Verde,..,,..
-123,Micronesia (Federated States of),..,,..
-124,Guyana,0.515,,114
-125,Nicaragua,0.449,,95
-126,Morocco,0.525,,117
-126,Namibia,0.401,,81
-128,Guatemala,0.533,,119
-129,Tajikistan,0.357,,69
-130,India,0.563,,130
-131,Honduras,0.48,,106
-132,Bhutan,0.457,,97
-133,Timor-Leste,..,,..
-134,Syrian Arab Republic,0.533,,119
-134,Vanuatu,..,,..
-136,Congo,0.593,,137
-137,Kiribati,..,,..
-138,Equatorial Guinea,..,,..
-139,Zambia,0.587,,132
-140,Ghana,0.554,,127
-141,Lao People's Democratic Republic,..,,..
-142,Bangladesh,0.503,,111
-143,Cambodia,0.477,,104
-143,Sao Tome and Principe,..,,..
-,LOW HUMAN DEVELOPMENT,,,
-145,Kenya,0.552,,126
-145,Nepal,0.489,,108
-147,Pakistan,0.536,,121
-148,Myanmar,0.413,,85
-149,Angola,..,,..
-150,Swaziland,0.557,,128
-151,Tanzania (United Republic of),0.547,,125
-152,Nigeria,..,,..
-153,Cameroon,0.587,,132
-154,Madagascar,..,,..
-155,Zimbabwe,0.504,,112
-156,Mauritania,0.61,,139
-156,Solomon Islands,..,,..
-158,Papua New Guinea,0.611,,140
-159,Comoros,..,,..
-160,Yemen,0.744,,155
-161,Lesotho,0.541,,124
-162,Togo,0.588,,134
-163,Haiti,0.603,,138
-163,Rwanda,0.4,,80
-163,Uganda,0.538,,122
-166,Benin,0.614,,142
-167,Sudan,0.591,,135
-168,Djibouti,..,,..
-169,South Sudan,..,,..
-170,Senegal,0.528,,118
-171,Afghanistan,0.693,,152
-172,C?te d'Ivoire,0.679,,151
-173,Malawi,0.611,,140
-174,Ethiopia,0.558,,129
-175,Gambia,0.622,,143
-176,Congo (Democratic Republic of the),0.673,,149
-177,Liberia,0.651,,146
-178,Guinea-Bissau,..,,..
-179,Mali,0.677,,150
-180,Mozambique,0.591,,135
-181,Sierra Leone,0.65,,145
-182,Guinea,..,,..
-183,Burkina Faso,0.631,,144
-184,Burundi,0.492,,109
-185,Chad,0.706,,153
-186,Eritrea,..,,..
-187,Central African Republic,0.655,,147
-188,Niger,0.713,,154
-,OTHER COUNTRIES OR TERRITORIES,,,
-,Korea (Democratic People's Rep. of),..,,..
-,Marshall Islands,..,,..
-,Monaco,..,,..
-,Nauru,..,,..
-,San Marino,..,,..
-,Somalia,..,,..
-,Tuvalu,..,,..
-,,,,
-,Human development groups,,,
-,Very high human development,0.199,,??
-,High human development,0.31,,??
-,Medium human development,0.506,,??
-,Low human development,0.583,,??
-,,,,
-,Developing countries,0.478,,??
-,,,,
-,Regions,,,
-,Arab States,0.537,,??
-,East Asia and the Pacific,0.328,,??
-,Europe and Central Asia,0.3,,??
-,Latin America and the Caribbean,0.415,,??
-,South Asia,0.536,,??
-,Sub-Saharan Africa,0.575,,??
-,,,,
-,Least developed countries,0.566,,??
-,Small island developing states,0.474,,??
-,,,,
-,Organisation for Economic Co-operation and Development,0.231,,??
-,,,,
-,World,0.449,,??
+Country,2014
+Norway,0.067
+Australia,0.11
+Switzerland,0.028
+Denmark,0.048
+Netherlands,0.062
+Germany,0.041
+Ireland,0.113
+United States,0.28
+Canada,0.129
+New Zealand,0.157
+Singapore,0.088
+"Hong Kong, China (SAR)",..
+Liechtenstein,..
+Sweden,0.055
+United Kingdom,0.177
+Iceland,0.087
+Korea (Republic of),0.125
+Israel,0.101
+Luxembourg,0.1
+Japan,0.133
+Belgium,0.063
+France,0.088
+Austria,0.053
+Finland,0.075
+Slovenia,0.016
+Spain,0.095
+Italy,0.068
+Czech Republic,0.091
+Greece,0.146
+Estonia,0.164
+Brunei Darussalam,..
+Cyprus,0.124
+Qatar,0.524
+Andorra,..
+Slovakia,0.164
+Poland,0.138
+Lithuania,0.125
+Malta,0.227
+Saudi Arabia,0.284
+Argentina,0.376
+United Arab Emirates,0.232
+Chile,0.338
+Portugal,0.111
+Hungary,0.209
+Bahrain,0.265
+Latvia,0.167
+Croatia,0.149
+Kuwait,0.387
+Montenegro,0.171
+Belarus,0.151
+Russian Federation,0.276
+Oman,0.275
+Romania,0.333
+Uruguay,0.313
+Bahamas,0.298
+Kazakhstan,0.267
+Barbados,0.357
+Antigua and Barbuda,..
+Bulgaria,0.212
+Palau,..
+Panama,0.454
+Malaysia,0.209
+Mauritius,0.419
+Seychelles,..
+Trinidad and Tobago,0.371
+Serbia,0.176
+Cuba,0.356
+Lebanon,0.385
+Costa Rica,0.349
+Iran (Islamic Republic of),0.515
+Venezuela (Bolivarian Republic of),0.476
+Turkey,0.359
+Sri Lanka,0.37
+Mexico,0.373
+Brazil,0.457
+Georgia,0.382
+Saint Kitts and Nevis,..
+Azerbaijan,0.303
+Grenada,..
+Jordan,0.473
+The former Yugoslav Republic of Macedonia,0.164
+Ukraine,0.286
+Algeria,0.413
+Peru,0.406
+Albania,0.217
+Armenia,0.318
+Bosnia and Herzegovina,0.201
+Ecuador,0.407
+Saint Lucia,..
+China,0.191
+Fiji,0.418
+Mongolia,0.325
+Thailand,0.38
+Dominica,..
+Libya,0.134
+Tunisia,0.24
+Colombia,0.429
+Saint Vincent and the Grenadines,..
+Jamaica,0.43
+Tonga,0.666
+Belize,0.426
+Dominican Republic,0.477
+Suriname,0.463
+Maldives,0.243
+Samoa,0.457
+Botswana,0.48
+Moldova (Republic of),0.248
+Egypt,0.573
+Turkmenistan,..
+Gabon,0.514
+Indonesia,0.494
+Paraguay,0.472
+"Palestine, State of",..
+Uzbekistan,..
+Philippines,0.42
+El Salvador,0.427
+South Africa,0.407
+Viet Nam,0.308
+Bolivia (Plurinational State of),0.444
+Kyrgyzstan,0.353
+Iraq,0.539
+Cabo Verde,..
+Micronesia (Federated States of),..
+Guyana,0.515
+Nicaragua,0.449
+Morocco,0.525
+Namibia,0.401
+Guatemala,0.533
+Tajikistan,0.357
+India,0.563
+Honduras,0.48
+Bhutan,0.457
+Timor-Leste,..
+Syrian Arab Republic,0.533
+Vanuatu,..
+Congo,0.593
+Kiribati,..
+Equatorial Guinea,..
+Zambia,0.587
+Ghana,0.554
+Lao People's Democratic Republic,..
+Bangladesh,0.503
+Cambodia,0.477
+Sao Tome and Principe,..
+Kenya,0.552
+Nepal,0.489
+Pakistan,0.536
+Myanmar,0.413
+Angola,..
+Swaziland,0.557
+Tanzania (United Republic of),0.547
+Nigeria,..
+Cameroon,0.587
+Madagascar,..
+Zimbabwe,0.504
+Mauritania,0.61
+Solomon Islands,..
+Papua New Guinea,0.611
+Comoros,..
+Yemen,0.744
+Lesotho,0.541
+Togo,0.588
+Haiti,0.603
+Rwanda,0.4
+Uganda,0.538
+Benin,0.614
+Sudan,0.591
+Djibouti,..
+South Sudan,..
+Senegal,0.528
+Afghanistan,0.693
+C?te d'Ivoire,0.679
+Malawi,0.611
+Ethiopia,0.558
+Gambia,0.622
+Congo (Democratic Republic of the),0.673
+Liberia,0.651
+Guinea-Bissau,..
+Mali,0.677
+Mozambique,0.591
+Sierra Leone,0.65
+Guinea,..
+Burkina Faso,0.631
+Burundi,0.492
+Chad,0.706
+Eritrea,..
+Central African Republic,0.655
+Niger,0.713
