@@ -1,0 +1,129 @@
+body {
+    background: #D9D9D9;
+}
+
+#top {
+    width:1350;
+    height:700;
+}
+
+
+div#firstmap{
+    width:740;
+    float:left;
+    border:1px solid black;
+}
+
+div#firstmapdata{
+    margin-left:740;
+    width:550;
+}
+
+#countries .pressedBest {
+    fill: #003300;
+}
+
+#countries .pressedMidHigh {
+    fill: #008000;
+}
+
+#countries .pressedMidLow {
+    fill: #00dd00;
+}
+
+#countries .pressedLow {
+    fill: #80ff80;
+}
+
+#countries .active {
+    fill: #FF0000;
+}
+
+.countryLegendText {
+    font-size:75%;
+}
+
+#fmd_title{
+    text-align:center;
+}
+
+#fmd_info{
+    width:550;
+    font-size:normal;
+}
+
+#fmd_ranking{
+    width:550;
+    text-align:center;
+    font-size:80%;
+}
+
+#fmd_ihdi {
+    width:270;
+    text-align:center;
+    display:block;
+    float:left;
+}
+
+#fmd_hdi {
+    margin-left:300;
+    width:250;
+}
+
+#fmd_button{
+    margin-top:50px;
+    margin-left:50px;
+    width:550;
+}
+.toggle-button-text {
+    font-size:75%;
+}
+
+.hdiLine{
+    fill:none;
+    stroke: red;
+    stroke-opacity: .25;
+    stroke-width:2;
+}
+
+.graphLabel {
+    font-size:75%;
+}
+.graphLabelSmall{
+    font-size:60%;
+}
+
+#middle {
+    margin-top:25px;
+}
+
+#middlemap {
+    border:1px solid black;
+    width:900;
+    float:left;
+}
+
+.worstGII{
+    fill: #FF0000;
+}
+
+.badGII{
+    fill: #FF9000;
+}
+
+.averageGII{
+    fill:#D0FF00;
+}
+
+.greatGII{
+    fill:#80FF00;
+}
+
+.bestGII{
+    fill:#00FF00;
+}
+
+#middlegraph{
+    margin-left:910px;
+    width:500;
+}

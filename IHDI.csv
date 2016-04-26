@@ -1,4 +1,4 @@
-Ranking,Country,2014,Ranking compared with HDI ranking
+Ranking,Country,2014,Compared
 1,Norway,0.944,0
 2,Australia,0.935,-2
 3,Switzerland,0.93,0
@@ -15,7 +15,7 @@ Ranking,Country,2014,Ranking compared with HDI ranking
 14,Sweden,0.907,3
 14,United Kingdom,0.907,-2
 16,Iceland,0.899,4
-17,Korea (Republic of),0.898,-19
+17,South Korea,0.898,-19
 18,Israel,0.894,-9
 19,Luxembourg,0.892,0
 20,Japan,0.891,-5
@@ -68,8 +68,8 @@ Ranking,Country,2014,Ranking compared with HDI ranking
 67,Cuba,0.769,..
 67,Lebanon,0.769,-15
 69,Costa Rica,0.766,-11
-69,Iran (Islamic Republic of),0.766,-41
-71,Venezuela (Bolivarian Republic of),0.762,-11
+69,Iran,0.766,-41
+71,Venezuela,0.762,-11
 72,Turkey,0.761,0
 73,Sri Lanka,0.757,7
 74,Mexico,0.756,-12
@@ -117,7 +117,7 @@ Ranking,Country,2014,Ranking compared with HDI ranking
 116,El Salvador,0.666,-6
 116,South Africa,0.666,-15
 116,Viet Nam,0.666,9
-119,Bolivia (Plurinational State of),0.662,-5
+119,Bolivia,0.662,-5
 120,Kyrgyzstan,0.655,17
 121,Iraq,0.654,2
 122,Cabo Verde,0.646,5
@@ -149,7 +149,7 @@ Ranking,Country,2014,Ranking compared with HDI ranking
 148,Myanmar,0.536,..
 149,Angola,0.532,-8
 150,Swaziland,0.531,-2
-151,Tanzania (United Republic of),0.521,4
+151,Tanzania,0.521,4
 152,Nigeria,0.514,-9
 153,Cameroon,0.512,-1
 154,Madagascar,0.51,4

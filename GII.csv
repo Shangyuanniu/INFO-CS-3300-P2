@@ -1,189 +1,1 @@
-Country,2014
-Norway,0.067
-Australia,0.11
-Switzerland,0.028
-Denmark,0.048
-Netherlands,0.062
-Germany,0.041
-Ireland,0.113
-United States,0.28
-Canada,0.129
-New Zealand,0.157
-Singapore,0.088
-"Hong Kong, China (SAR)",..
-Liechtenstein,..
-Sweden,0.055
-United Kingdom,0.177
-Iceland,0.087
-Korea (Republic of),0.125
-Israel,0.101
-Luxembourg,0.1
-Japan,0.133
-Belgium,0.063
-France,0.088
-Austria,0.053
-Finland,0.075
-Slovenia,0.016
-Spain,0.095
-Italy,0.068
-Czech Republic,0.091
-Greece,0.146
-Estonia,0.164
-Brunei Darussalam,..
-Cyprus,0.124
-Qatar,0.524
-Andorra,..
-Slovakia,0.164
-Poland,0.138
-Lithuania,0.125
-Malta,0.227
-Saudi Arabia,0.284
-Argentina,0.376
-United Arab Emirates,0.232
-Chile,0.338
-Portugal,0.111
-Hungary,0.209
-Bahrain,0.265
-Latvia,0.167
-Croatia,0.149
-Kuwait,0.387
-Montenegro,0.171
-Belarus,0.151
-Russian Federation,0.276
-Oman,0.275
-Romania,0.333
-Uruguay,0.313
-Bahamas,0.298
-Kazakhstan,0.267
-Barbados,0.357
-Antigua and Barbuda,..
-Bulgaria,0.212
-Palau,..
-Panama,0.454
-Malaysia,0.209
-Mauritius,0.419
-Seychelles,..
-Trinidad and Tobago,0.371
-Serbia,0.176
-Cuba,0.356
-Lebanon,0.385
-Costa Rica,0.349
-Iran (Islamic Republic of),0.515
-Venezuela (Bolivarian Republic of),0.476
-Turkey,0.359
-Sri Lanka,0.37
-Mexico,0.373
-Brazil,0.457
-Georgia,0.382
-Saint Kitts and Nevis,..
-Azerbaijan,0.303
-Grenada,..
-Jordan,0.473
-The former Yugoslav Republic of Macedonia,0.164
-Ukraine,0.286
-Algeria,0.413
-Peru,0.406
-Albania,0.217
-Armenia,0.318
-Bosnia and Herzegovina,0.201
-Ecuador,0.407
-Saint Lucia,..
-China,0.191
-Fiji,0.418
-Mongolia,0.325
-Thailand,0.38
-Dominica,..
-Libya,0.134
-Tunisia,0.24
-Colombia,0.429
-Saint Vincent and the Grenadines,..
-Jamaica,0.43
-Tonga,0.666
-Belize,0.426
-Dominican Republic,0.477
-Suriname,0.463
-Maldives,0.243
-Samoa,0.457
-Botswana,0.48
-Moldova (Republic of),0.248
-Egypt,0.573
-Turkmenistan,..
-Gabon,0.514
-Indonesia,0.494
-Paraguay,0.472
-"Palestine, State of",..
-Uzbekistan,..
-Philippines,0.42
-El Salvador,0.427
-South Africa,0.407
-Viet Nam,0.308
-Bolivia (Plurinational State of),0.444
-Kyrgyzstan,0.353
-Iraq,0.539
-Cabo Verde,..
-Micronesia (Federated States of),..
-Guyana,0.515
-Nicaragua,0.449
-Morocco,0.525
-Namibia,0.401
-Guatemala,0.533
-Tajikistan,0.357
-India,0.563
-Honduras,0.48
-Bhutan,0.457
-Timor-Leste,..
-Syrian Arab Republic,0.533
-Vanuatu,..
-Congo,0.593
-Kiribati,..
-Equatorial Guinea,..
-Zambia,0.587
-Ghana,0.554
-Lao People's Democratic Republic,..
-Bangladesh,0.503
-Cambodia,0.477
-Sao Tome and Principe,..
-Kenya,0.552
-Nepal,0.489
-Pakistan,0.536
-Myanmar,0.413
-Angola,..
-Swaziland,0.557
-Tanzania (United Republic of),0.547
-Nigeria,..
-Cameroon,0.587
-Madagascar,..
-Zimbabwe,0.504
-Mauritania,0.61
-Solomon Islands,..
-Papua New Guinea,0.611
-Comoros,..
-Yemen,0.744
-Lesotho,0.541
-Togo,0.588
-Haiti,0.603
-Rwanda,0.4
-Uganda,0.538
-Benin,0.614
-Sudan,0.591
-Djibouti,..
-South Sudan,..
-Senegal,0.528
-Afghanistan,0.693
-C?te d'Ivoire,0.679
-Malawi,0.611
-Ethiopia,0.558
-Gambia,0.622
-Congo (Democratic Republic of the),0.673
-Liberia,0.651
-Guinea-Bissau,..
-Mali,0.677
-Mozambique,0.591
-Sierra Leone,0.65
-Guinea,..
-Burkina Faso,0.631
-Burundi,0.492
-Chad,0.706
-Eritrea,..
-Central African Republic,0.655
-Niger,0.713
+Country,2014,Mortality,ParliamentNorway,0.067,4,39.6Australia,0.11,6,30.5Switzerland,0.028,6,28.5Denmark,0.048,5,38.0Netherlands,0.062,6,36.9Germany,0.041,7,36.9Ireland,0.113,9,19.9United States,0.28,28,19.4Canada,0.129,11,28.2New Zealand,0.157,8,31.4Singapore,0.088,6,25.3"Hong Kong, China (SAR)",..,..,..Liechtenstein,..,..,20.0Sweden,0.055,4,43.6United Kingdom,0.177,8,23.5Iceland,0.087,4,41.3South Korea,0.125,27,16.3Israel,0.101,2,22.5Luxembourg,0.1,11,28.3Japan,0.133,6,11.6Belgium,0.063,6,42.4France,0.088,12,25.7Austria,0.053,4,30.3Finland,0.075,4,42.5Slovenia,0.016,7,27.7Spain,0.095,4,38.0Italy,0.068,4,30.1Czech Republic,0.091,5,18.9Greece,0.146,5,21.0Estonia,0.164,11,19.8Brunei Darussalam,..,27,..Cyprus,0.124,10,12.5Qatar,0.524,6,0.0Andorra,..,..,50.0Slovakia,0.164,7,18.7Poland,0.138,3,22.1Lithuania,0.125,11,23.4Malta,0.227,9,13.0Saudi Arabia,0.284,16,19.9Argentina,0.376,69,36.8United Arab Emirates,0.232,8,17.5Chile,0.338,22,15.8Portugal,0.111,8,31.3Hungary,0.209,14,10.1Bahrain,0.265,22,15.0Latvia,0.167,13,18.0Croatia,0.149,13,25.8Kuwait,0.387,14,1.5Montenegro,0.171,7,17.3Belarus,0.151,1,30.1Russian Federation,0.276,24,14.5Oman,0.275,11,9.6Romania,0.333,33,12.0Uruguay,0.313,14,11.5Bahamas,0.298,37,16.7Kazakhstan,0.267,26,20.1Barbados,0.357,52,19.6Antigua and Barbuda,..,..,25.7Bulgaria,0.212,5,20.4Palau,..,..,10.3Panama,0.454,85,19.3Malaysia,0.209,29,14.2Mauritius,0.419,73,11.6Seychelles,..,..,43.8Trinidad and Tobago,0.371,84,24.7Serbia,0.176,16,34.0Cuba,0.356,80,48.9Lebanon,0.385,16,3.1Costa Rica,0.349,38,33.3Iran (Islamic Republic of),0.515,23,3.1Venezuela (Bolivarian Republic of),0.476,110,17.0Turkey,0.359,20,14.4Sri Lanka,0.37,29,5.8Mexico,0.373,49,37.1Brazil,0.457,69,9.6Georgia,0.382,41,11.3Saint Kitts and Nevis,..,..,6.7Azerbaijan,0.303,26,15.6Grenada,..,23,25.0Jordan,0.473,50,11.6The former Yugoslav Republic of Macedonia,0.164,7,33.3Ukraine,0.286,23,11.8Algeria,0.413,89,25.7Peru,0.406,89,22.3Albania,0.217,21,20.7Armenia,0.318,29,10.7Bosnia and Herzegovina,0.201,8,19.3Ecuador,0.407,87,41.6Saint Lucia,..,34,20.7China,0.191,32,23.6Fiji,0.418,59,14.0Mongolia,0.325,68,14.9Thailand,0.38,26,6.1Dominica,..,..,21.9Libya,0.134,15,16.0Tunisia,0.24,46,31.3Colombia,0.429,83,20.9Saint Vincent and the Grenadines,..,45,13.0Jamaica,0.43,80,16.7Tonga,0.666,120,0.0Belize,0.426,45,13.3Dominican Republic,0.477,100,19.1Suriname,0.463,130,11.8Maldives,0.243,31,5.9Samoa,0.457,58,6.1Botswana,0.48,170,9.5Moldova (Republic of),0.248,21,20.8Egypt,0.573,45,2.2Turkmenistan,..,61,25.8Gabon,0.514,240,16.2Indonesia,0.494,190,17.1Paraguay,0.472,110,16.8"Palestine, State of",..,..,..Uzbekistan,..,36,16.4Philippines,0.42,120,27.1El Salvador,0.427,69,27.4South Africa,0.407,140,40.7Viet Nam,0.308,49,24.3Bolivia (Plurinational State of),0.444,200,51.8Kyrgyzstan,0.353,75,23.3Iraq,0.539,67,26.5Cabo Verde,..,53,20.8Micronesia (Federated States of),..,96,0.0Guyana,0.515,250,31.3Nicaragua,0.449,100,39.1Morocco,0.525,120,11.0Namibia,0.401,130,37.7Guatemala,0.533,140,13.3Tajikistan,0.357,44,15.2India,0.563,190,12.2Honduras,0.48,120,25.8Bhutan,0.457,120,8.3Timor-Leste,..,270,38.5Syrian Arab Republic,0.533,49,12.4Vanuatu,..,86,0.0Congo,0.593,410,11.5Kiribati,..,130,8.7Equatorial Guinea,..,290,19.7Zambia,0.587,280,12.7Ghana,0.554,380,10.9Lao People's Democratic Republic,..,..,25.0Bangladesh,0.503,170,20.0Cambodia,0.477,170,19.0Sao Tome and Principe,..,210,18.2Kenya,0.552,400,20.8Nepal,0.489,190,29.5Pakistan,0.536,170,19.7Myanmar,0.413,200,4.7Angola,..,460,36.8Swaziland,0.557,310,14.7Tanzania (United Republic of),0.547,410,36.0Nigeria,..,560,6.6Cameroon,0.587,590,27.1Madagascar,..,440,20.5Zimbabwe,0.504,470,35.1Mauritania,0.61,320,22.2Solomon Islands,..,130,2.0Papua New Guinea,0.611,220,2.7Comoros,..,350,3.0Yemen,0.744,270,0.7Lesotho,0.541,490,26.8Togo,0.588,450,17.6Haiti,0.603,380,3.5Rwanda,0.4,320,57.5Uganda,0.538,360,35.0Benin,0.614,340,8.4Sudan,0.591,360,23.8Djibouti,..,230,12.7South Sudan,..,730,24.3Senegal,0.528,320,42.7Afghanistan,0.693,400,27.6C?te d'Ivoire,0.679,720,9.2Malawi,0.611,510,16.7Ethiopia,0.558,420,25.5Gambia,0.622,430,9.4Congo (Democratic Republic of the),0.673,730,8.2Liberia,0.651,640,10.7Guinea-Bissau,..,560,13.7Mali,0.677,550,9.5Mozambique,0.591,480,39.6Sierra Leone,0.65,"1,100",12.4Guinea,..,650,21.9Burkina Faso,0.631,400,13.3Burundi,0.492,740,34.9Chad,0.706,980,14.9Eritrea,..,380,22.0Central African Republic,0.655,880,12.5Niger,0.713,630,13.3
