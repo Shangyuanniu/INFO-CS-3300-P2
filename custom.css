@@ -105,25 +105,40 @@ div#firstmapdata{
 
 .worstGII{
     fill: #FF0000;
+    background: #FF0000;
 }
 
 .badGII{
     fill: #FF9000;
+    background: #FF9000;
 }
 
 .averageGII{
     fill:#D0FF00;
+    background:#D0FF00;
 }
 
 .greatGII{
     fill:#80FF00;
+    background:#80FF00;
 }
 
 .bestGII{
     fill:#00FF00;
+    background:#00FF00;
 }
 
 #middlegraph{
     margin-left:910px;
     width:500;
 }
+
+#middlegraph div {
+    font: 10px sans-serif;
+    text-align: right;
+    padding: 3px;
+    margin: 1px;
+    color: black;
+    font-weight:bold;
+}
+
