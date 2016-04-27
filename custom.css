@@ -1,10 +1,15 @@
 body {
     background: #D9D9D9;
+    font: 10px sans-serif;
 }
 
 #top {
     width:1350;
     height:700;
+}
+
+#firstmap path {
+    cursor: pointer;
 }
 
 
@@ -40,7 +45,8 @@ div#firstmapdata{
 }
 
 .countryLegendText {
-    font-size:75%;
+    font-size:14px;
+    font-weight:normal;
 }
 
 #fmd_title{
@@ -103,6 +109,10 @@ div#firstmapdata{
     float:left;
 }
 
+#middlemap path{
+    cursor: pointer;
+}
+
 .worstGII{
     fill: #FF0000;
     background: #FF0000;
@@ -128,6 +138,10 @@ div#firstmapdata{
     background:#00FF00;
 }
 
+#middlemap .active{
+    fill:#0066ff;
+}
+
 #middlegraph{
     margin-left:910px;
     width:500;
@@ -140,5 +154,18 @@ div#firstmapdata{
     margin: 1px;
     color: black;
     font-weight:bold;
+}
+
+.tooltip{
+    position:absolute;
+    text-align:center;
+    width:120px;
+    height:70px;
+    padding: 2px;
+    padding-top:10px;
+    font:12px sans-serif;
+    background:black;
+    color:white;
+    border-radius: 15px;
 }
 

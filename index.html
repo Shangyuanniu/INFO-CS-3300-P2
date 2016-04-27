@@ -73,7 +73,7 @@
           <div class="toggle-button">
             <button></button>
           </div>
-          <div class="toggle-button-text">Show All</div>
+          <div class="toggle-button-text">Show All On Map</div>
         </div>
 
       </div>
@@ -113,6 +113,8 @@
     .attr("height", height)
     .on("click", clicked);
 
+    var tooltip = d3.select("body").append("div").attr("class", "tooltip").style("opacity", 0);
+
     var g = svg.append("g");
     var idMap = {};
     var ihdi = {};
@@ -151,19 +153,27 @@
         .data(topojson.feature(world, world.objects.countries).features)
         .enter().append("path")
         .attr("d", path)
-        .on("click", clicked);
+        .on("click", clicked)
+        .on("mouseover", function(d) {
+            var tempCountryName = idMap[d.id];
 
+            var tempString = ihdi[tempCountryName] ?
+                ("World Ranking: " + ihdi[tempCountryName]["Ranking"] + " <br>"
+                + "IHDI Score: " + ihdi[tempCountryName]["2014"] + " <br>") : "No Data Present";
+            tooltip .style("opacity", .7);
+                tooltip.html(tempCountryName + " <br><br>" + tempString)
+                .style("left", (d3.event.pageX) + "px")
+                .style("top", (d3.event.pageY - 85) + "px");
+            });
         g.append("path")
         .datum(topojson.mesh(world, world.objects.countries, function(a, b) { return a !== b; }))
         .attr("id", "country-borders")
         .attr("d", path);
-      });
-
 
       var legendRectSize = 14;
       var legendSpacing = 4;
-      var colors = ["#80ff80", "#00dd00", "#008000", "#003000"].reverse();
-      var colorNames = ["Worst", "Bad", "Decent", "Best"].reverse();
+      var colors = ["#a6a6a6", "#80ff80", "#00dd00", "#008000", "#003000"].reverse();
+      var colorNames = ["No Data", "Worst", "Bad", "Decent", "Best"].reverse();
 
       var legend = svg.selectAll('.legend')
       .data(colors)
@@ -171,7 +181,6 @@
       .append('g')
       .attr('class', 'legend')
       .attr('transform', 'translate(50,400)');
-
 
       for (var i = 0; i < colors.length; i ++){
       legend.append('rect')
@@ -189,8 +198,9 @@
       .text(colorNames[i]);
       }
 
+      });
 
-    }
+   }
 
     // Loads the data
 
@@ -230,8 +240,6 @@
       loadGIIMap();
       loadGIIGraph();
     }
-
-
 
     //
     //
@@ -465,10 +473,6 @@
         .y(function(d) {return yScale(d.y);})
         svghdi.append("path").attr("d", lineFunction(lineData))
         .attr("class", "hdiLine");
-
-
-
-
      }
 
      function loadGIIMap(){
@@ -478,8 +482,7 @@
 
       var projection = d3.geo.mercator()
       .scale(150)
-      .translate([width/2, height/2])
-      ;
+      .translate([width/2, height/2]);
 
       var path = d3.geo.path()
       .projection(projection);
@@ -504,6 +507,17 @@
         .enter().append("path")
         .attr("d", path)
         .on("click", giiClick)
+        .on("mouseover", function(d) {
+            var tempCountryName = idMap[d.id];
+
+            var tempString = ihdi[tempCountryName] ?
+                ("World Ranking: " + ihdi[tempCountryName]["Ranking"] + " <br>"
+                + "IHDI Score: " + ihdi[tempCountryName]["2014"] + " <br>") : "No Data Present";
+            tooltip .style("opacity", .7);
+                tooltip.html(tempCountryName + " <br><br>" + tempString)
+                .style("left", (d3.event.pageX) + "px")
+                .style("top", (d3.event.pageY - 85) + "px");
+            })
         .attr("class", function(d){
           if (gii[idMap[d.id]]){
             var val = Number(gii[idMap[d.id]]["2014"]);
@@ -534,8 +548,8 @@
 
       var legendRectSize = 18;
       var legendSpacing = 4;
-      var colors = ["#FF0000", "#FF9000", "#D0FF00", "#80FF00", "#00FF00", "#000000"];
-      var colorNames = ["Worst", "Bad", "Average", "Great", "Best", "No Data"];
+      var colors = ["#FF0000", "#FF9000", "#D0FF00", "#80FF00", "#00FF00", "#000000", "#0066ff"];
+      var colorNames = ["Worst", "Bad", "Average", "Great", "Best", "No Data", "Selected"];
 
       var legend = svg.selectAll('.legend')
       .data(colors)
@@ -555,6 +569,7 @@
       .style('stroke', colors[i]);
 
       legend.append('text')
+      .attr('class', 'countryLegendText')
       .attr('x', legendRectSize + legendSpacing*7)
       .attr('y', legendRectSize + legendSpacing*2 + 20*i)
       .text(colorNames[i]);
@@ -562,7 +577,7 @@
 
      }
 
-     var mainCountries = ["Switzerland", "Germany", "Netherlands", "Japan", "China", "United States", "Algeria", "Brazil"];
+     var mainCountries = ["Switzerland", "Germany", "Netherlands", "Japan", "Algeria"];
 
      function loadGIIGraph(name){
        if (name && gii[name] && mainCountries.indexOf(name) == -1) {
@@ -598,11 +613,19 @@
          return "worstGII";
          }
        })
+       .transition()
+       .duration(300)
        .style("width", function(d) { return x(Number(d["2014"])+0.1) + "px"; })
-       .text(function(d) { return d["2014"]+ " " + d["Country"]; });
+       .text(function(d) { return d["Country"] + ":" + d["2014"]; });
      }
 
      function giiClick(d){
+        d3.selectAll("#middlemap")
+        .selectAll("path").classed("active",
+          function(x){
+              return d.id==x.id;
+          });
+
        loadGIIGraph(idMap[d.id]);
      }
 
