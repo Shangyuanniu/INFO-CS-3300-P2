@@ -853,7 +853,7 @@
 
 function drawbubble(year){
 
-  var diameter = 1000, //max size of the bubbles
+  var diameter = 800, //max size of the bubbles
   color    = d3.scale.category20b(); //color category
 
   var bubble = d3.layout.pack()
@@ -890,7 +890,7 @@ function drawbubble(year){
         .on("mouseover", function(d) {
             var tempCountryName = d["Country"];
 
-            var tempString = d.value;
+            var tempString = d.value/1000000000 + "Billion Dollars";
             tooltip .style("opacity", .7);
                 tooltip.html(tempCountryName + " <br><br>" + tempString)
                 .style("left", (d3.event.pageX) + "px")
