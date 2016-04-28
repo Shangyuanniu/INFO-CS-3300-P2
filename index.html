@@ -94,6 +94,16 @@
       </div>
     </div>
 
+    <div id="bubble">
+      <h2> GDP Bubble Chart </h2>
+      <div id = "bubblegraph"></div>
+      <div id = "bubblesliderwrap">
+        Data From Year : <br>
+        <div id="amount">1975</div>
+        <div id="bubble-slider-range"></div>
+    </div>
+    </div>
+
     <div id="gdp">
       <h2> GDP per capita vs HDI </h2>
       <div id = "gdpgraph"></div>
@@ -182,7 +192,11 @@
                 tooltip.html(tempCountryName + " <br><br>" + tempString)
                 .style("left", (d3.event.pageX) + "px")
                 .style("top", (d3.event.pageY - 85) + "px");
-            });
+            })
+            .on("mouseout", function(){
+                tooltip .style("opacity", 0);
+              });
+
         g.append("path")
         .datum(topojson.mesh(world, world.objects.countries, function(a, b) { return a !== b; }))
         .attr("id", "country-borders")
@@ -553,7 +567,12 @@
                 tooltip.html(tempCountryName + " <br><br>" + tempString)
                 .style("left", (d3.event.pageX) + "px")
                 .style("top", (d3.event.pageY - 85) + "px");
-            })
+            }) 
+
+        .on("mouseout", function(){
+                tooltip .style("opacity", 0);
+              })
+
         .attr("class", function(d){
           if (gii[idMap[d.id]]){
             var val = Number(gii[idMap[d.id]]["2014"]);
@@ -821,5 +840,91 @@
           $(this).toggleClass('toggle-button-selected');
         });
   </script>
+
+
+
+  <script>
+//bubble chart
+ var tooltip = d3.select("body").append("div").attr("class", "tooltip").style("opacity", 0);
+
+function drawbubble(year){
+
+  var diameter = 1000, //max size of the bubbles
+  color    = d3.scale.category20b(); //color category
+
+  var bubble = d3.layout.pack()
+    .sort(null)
+    .size([diameter, diameter])
+    .padding(1.5);
+
+  var svg = d3.select("#bubblegraph")
+    .append("svg")
+    .attr("width", diameter)
+    .attr("height", diameter)
+    .attr("class", "bubble");
+  d3.csv("gdp_market.csv", function(error, data){
+    //convert numerical values from strings to numbers
+    data = data.map(function(d){ d.value = +d[year]; return d; });
+
+    //bubbles needs very specific format, convert data to this.
+    var nodes = bubble.nodes({children:data}).filter(function(d) { return !d.children; });
+
+    //setup the chart
+    var bubbles = svg.append("g")
+        .attr("transform", "translate(0,0)")
+        .selectAll(".bubble")
+        .data(nodes)
+        .enter();
+
+    //create the bubbles
+    bubbles.append("circle")
+        .attr("r", function(d){ return d.r; })
+        .attr("cx", function(d){ return d.x; })
+        .attr("cy", function(d){ return d.y; })
+        .style("fill", function(d) { return color(d.value); })
+
+        .on("mouseover", function(d) {
+            var tempCountryName = d["Country"];
+
+            var tempString = d.value;
+            tooltip .style("opacity", .7);
+                tooltip.html(tempCountryName + " <br><br>" + tempString)
+                .style("left", (d3.event.pageX) + "px")
+                .style("top", (d3.event.pageY - 85) + "px");
+            }) .on("mouseout", function(){
+                tooltip .style("opacity", 0);
+              });
+
+    // format the text for each bubble
+    bubbles.append("text")
+        .attr("x", function(d){ return d.x; })
+        .attr("y", function(d){ return d.y + 5; })
+        .attr("text-anchor", "middle")
+        .text(function(d){  return d.r>25 ? d["Country"] : ""; })
+        .style({
+            "fill":"white", 
+            "font-family":"Helvetica Neue, Helvetica, Arial, san-serif",
+            "font-size": "12px"
+        });
+  })
+};
+var yearsGDP = ["1975", "1980", "1985","1990", "1995", "2000", "2010", "2011", "2012", "2013", "2014"];
+
+      $(function() {
+        $("#bubble-slider-range").slider({
+        min: 0,
+        max: yearsGDP.length - 1,
+        value: 0,
+        slide: function(event, ui) {
+          $("#amount").html(yearsGDP[ui.value]);
+          d3.select("#bubblegraph").select("svg").remove();
+          drawbubble(yearsGDP[ui.value]);
+        }
+        });
+      })
+
+drawbubble(1975);
+
+</script>
   </body>
 </html>

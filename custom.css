@@ -170,6 +170,27 @@ div#firstmapdata{
 }
 
 
+
+#bubble {
+    float:left;
+    margin-top:50px;
+}
+
+#bubblegraph{
+    border:1px solid black;
+    width:900;
+    float:left;
+}
+
+
+#bubblesliderwrap{
+    margin-left:15px;
+    width:300px;
+    font-size:16px;
+    float:left;
+}
+
+
 #gdp {
     float:left;
     margin-top:50px;
