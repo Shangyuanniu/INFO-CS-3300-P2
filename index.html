@@ -262,7 +262,7 @@
 
     // GDP Market Price
     function loadGDP(){
-      d3.csv("gdp_market.csv", function(data){
+      d3.csv("GDP_per_capita.csv", function(data){
         for (var i=0; i < data.length; i ++){
           gdp[data[i].Country] = data[i];
         }
