@@ -571,7 +571,7 @@
                 tooltip.html(tempCountryName + " <br><br>" + tempString)
                 .style("left", (d3.event.pageX) + "px")
                 .style("top", (d3.event.pageY - 85) + "px");
-            }) 
+            })
 
         .on("mouseout", function(){
                 tooltip .style("opacity", 0);
@@ -759,7 +759,7 @@
         .range([gdpPadding, gdpWidth-gdpPadding]);
 
         gdpY = d3.scale.linear()
-        .domain([0.3,1])
+        .domain([0.1,1])
         .range([gdpHeight-gdpPadding, gdpPadding]);
 
         var xAxis = d3.svg.axis()
@@ -804,7 +804,7 @@
         .data(yearData)
         .enter().append("circle")
         .attr("class", "dot")
-        .attr("r", 1)
+        .attr("r", 3)
         .attr("cx", function(d){return gdpX(d["gdp"]);})
         .attr("cy", function(d){
         return gdpY(d["hdi"]);})
@@ -906,7 +906,7 @@ function drawbubble(year){
         .attr("text-anchor", "middle")
         .text(function(d){  return d.r>25 ? d["Country"] : ""; })
         .style({
-            "fill":"white", 
+            "fill":"white",
             "font-size": "15px"
         });
   })
