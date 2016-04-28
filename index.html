@@ -95,7 +95,7 @@
     </div>
 
     <div id="gdp">
-      <h2> GDP vs HDI </h2>
+      <h2> GDP per capita vs HDI </h2>
       <div id = "gdpgraph"></div>
       <div id = "gdpsliderwrap">
         Data From Year : <br>
@@ -671,7 +671,7 @@
     function overallGDP(){
       var gdpX;
       var gdpY;
-      var gdpWidth = 500,
+      var gdpWidth = 700,
       gdpHeight = 400,
       gdpPadding = 50;
 
@@ -731,18 +731,53 @@
 
           });
         }
-
-        console.log(yearData[0]);
-
         gdpX = d3.scale.log()
         .domain(d3.extent(yearData, function(d){return Number(d["gdp"]);}))
         .range([gdpPadding, gdpWidth-gdpPadding]);
 
         gdpY = d3.scale.linear()
-        .domain(d3.extent(yearData, function(d){return Number(d["hdi"]);}))
+        .domain([0.3,1])
         .range([gdpHeight-gdpPadding, gdpPadding]);
 
-        gdpsvg .selectAll(".dot")
+        var xAxis = d3.svg.axis()
+        .scale(gdpX)
+        .orient("bottom")
+        .ticks(20, d3.format("s"));
+
+        var yAxis = d3.svg.axis()
+        .scale(gdpY)
+        .orient("left");
+
+
+        gdpsvg.append("g")
+        .attr("class", "y axis")
+        .attr("transform", "translate(" + gdpPadding+ ",0)")
+        .call(yAxis)
+        .append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 6)
+        .attr("dy", ".71em")
+        .style("text-anchor", "end");
+
+        gdpsvg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + Number(gdpHeight-gdpPadding)+ ")")
+        .call(xAxis)
+        .selectAll("text")
+        .attr("y", 0)
+        .attr("x", 9)
+        .attr("dy", ".35em")
+        .attr("transform", "rotate(90)")
+        .style("text-anchor", "start");
+
+        gdpsvg.append("text").attr("x", gdpWidth/3 - gdpPadding).attr("y", gdpHeight- (1.0/4)*gdpPadding).text("GDP per Capita in USD").attr("class", "label");
+
+
+        gdpsvg.append("text").attr("x", 10).attr("y", gdpHeight/2)
+        .text("HDI").attr("class", "label")
+        .attr("alignment-baseline", "central");
+
+       gdpsvg .selectAll(".dot")
         .data(yearData)
         .enter().append("circle")
         .attr("class", "dot")
