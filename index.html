@@ -48,6 +48,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <link rel="stylesheet" type="text/css" href="custom.css">
     <link rel="stylesheet" type="text/css" href="button.css">
+
+    <!-- Load fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
   </head>
 
     <script>
@@ -56,7 +60,7 @@
 
   <body>
     <div class="title">
-      <h1>INFO 3300 Project 2</h1>
+      <h1>Economic Progress, Human Development, and Gender Inequality in Today's World</h1>
       <h4>By: Net IDs</h4>
     </div>
     <div id="top">
@@ -99,7 +103,7 @@
       <div id = "bubblegraph"></div>
       <div id = "bubblesliderwrap">
         Data From Year : <br>
-        <div id="amount">1975</div>
+        <div id="bubbleamount">1975</div>
         <div id="bubble-slider-range"></div>
     </div>
     </div>
@@ -903,8 +907,7 @@ function drawbubble(year){
         .text(function(d){  return d.r>25 ? d["Country"] : ""; })
         .style({
             "fill":"white", 
-            "font-family":"Helvetica Neue, Helvetica, Arial, san-serif",
-            "font-size": "12px"
+            "font-size": "15px"
         });
   })
 };
@@ -916,7 +919,7 @@ var yearsGDP = ["1975", "1980", "1985","1990", "1995", "2000", "2010", "2011", "
         max: yearsGDP.length - 1,
         value: 0,
         slide: function(event, ui) {
-          $("#amount").html(yearsGDP[ui.value]);
+          $("#bubbleamount").html(yearsGDP[ui.value]);
           d3.select("#bubblegraph").select("svg").remove();
           drawbubble(yearsGDP[ui.value]);
         }

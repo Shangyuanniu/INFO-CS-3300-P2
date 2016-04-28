@@ -1,6 +1,13 @@
 body {
-    background: #D9D9D9;
-    font: 10px sans-serif;
+    font-family: "Lato",sans-serif; 
+    font-style: normal; 
+    font-weight: 300; 
+    margin: 40px;
+}
+
+h2{ 
+
+    
 }
 
 #top {
@@ -16,7 +23,6 @@ body {
 div#firstmap{
     width:740;
     float:left;
-    border:1px solid black;
 }
 
 div#firstmapdata{
@@ -104,7 +110,6 @@ div#firstmapdata{
 }
 
 #middlemap {
-    border:1px solid black;
     width:900;
     float:left;
 }
@@ -177,7 +182,6 @@ div#firstmapdata{
 }
 
 #bubblegraph{
-    border:1px solid black;
     width:900;
     float:left;
 }
@@ -197,7 +201,6 @@ div#firstmapdata{
 }
 
 #gdpgraph {
-    border:1px solid black;
     width:900;
     float:left;
 }
