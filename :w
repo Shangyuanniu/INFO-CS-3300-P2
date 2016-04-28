@@ -40,17 +40,75 @@
     <title>
       INFO 3300 Project 2
     </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src = "http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src = "http://d3js.org/topojson.v1.min.js" charset="utf-8"></script>
     <script src = "http://d3js.org/queue.v1.min.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <link rel="stylesheet" type="text/css" href="custom.css">
     <link rel="stylesheet" type="text/css" href="button.css">
   </head>
 
     <script>
+
+      var gdpX;
+      var gdpY;
+      var gdpWidth = 500,
+      gdpHeight = 900,
+      gdpPadding = 50;
+
+      var parseDate = d3.time.format("%Y%m%d").parse;
+
+      var line = d3.svg.line()
+      .interpolate("basis")
+      .x(function(d) {
+        console.log(gdpX(d["gdp"]));
+        return Number(gdpX(d["gdp"]));
+      })
+      .y(function(d) { return Number(gdpY(d["hdi"])); });
+
+      var svg = d3.select("#gdpgraph").append("svg")
+      .attr("width", gdpWidth)
+      .attr("height", gdpHeight)
+      .append("g");
+
+      function drawGDP(year){
+        var yearData = [];
+
+        // Gets all the country datas
+        for (var key in idMap) {
+          var countryName = idMap[key];
+
+          // For bad countries not in our data set
+          if(!gdp[countryName] || !gdp[countryName][year] ||
+            !hdi[countryName] || !hdi[countryName][year]){
+            continue;
+          }
+
+          yearData.push({
+            "name":countryName,
+            "gdp": gdp[countryName][year],
+            "hdi": hdi[countryName][year]
+          });
+        }
+        console.log(d3.extent(yearData, function(d){return Number(d["gdp"])}));
+
+        gdpX = d3.scale.linear()
+        .domain(d3.extent(yearData, function(d){return d["gdp"]}))
+        .range([gdpPadding, gdpWidth-gdpPadding]);
+
+        gdpY = d3.scale.linear()
+        .domain(d3.extent(yearData, function(d){return d["hdi"]}))
+        .range([gdpHeight-gdpPadding, gdpPadding]);
+
+        console.log(yearData);
+        svg.append("svg:path").attr("d", line(yearData));
+      }
+
+      function drawGDPGraph(){
+
+        drawGDP("2000");
+      }
 
     </script>
 
@@ -97,11 +155,6 @@
     <div id="gdp">
       <h2> GDP vs HDI </h2>
       <div id = "gdpgraph"></div>
-      <div id = "gdpsliderwrap">
-        Data From Year : <br>
-        <div id="amount">1975</div>
-        <div id="slider-range"></div>
-      </div>
     </div>
     <script>
 
@@ -135,7 +188,6 @@
     var idMap = {};
     var ihdi = {};
     var hdi = {};
-    var hdi2 = {};
     var gii = {};
     var gdp = {};
 
@@ -239,15 +291,8 @@
         for (var i = 0; i < data.length; i ++){
           hdi[data[i].Country] = data[i];
         }
-
-        d3.tsv("hdi2.csv", function(data2){
-          for (var i = 0; i < data2.length; i ++){
-            hdi2[data2[i].Countryn] = data2[i];
-          }
-        });
         loadGII();
       });
-
     }
 
     // GII
@@ -274,7 +319,7 @@
       loadWorld();
       loadGIIMap();
       loadGIIGraph();
-      overallGDP();
+      drawGDPGraph();
     }
 
     //
@@ -666,94 +711,6 @@
 
        loadGIIGraph(idMap[d.id]);
      }
-
-     // GDP Drawing
-    function overallGDP(){
-      var gdpX;
-      var gdpY;
-      var gdpWidth = 500,
-      gdpHeight = 400,
-      gdpPadding = 50;
-
-      var parseDate = d3.time.format("%Y%m%d").parse;
-
-      var gdpsvg;
-
-      var yearsGDP = ["1975", "1980", "1985","1990", "1995", "2000", "2010", "2011", "2012", "2013", "2014"];
-
-      $(function() {
-        $("#slider-range").slider({
-        min: 0,
-        max: yearsGDP.length - 1,
-        value: 0,
-        slide: function(event, ui) {
-          $("#amount").html(yearsGDP[ui.value]);
-          d3.select("#gdpgraph").select("svg").remove();
-          drawGDP(yearsGDP[ui.value]);
-        }
-        });
-      })
-
-
-
-      drawGDP("1975");
-
-      function drawGDP(year){
-        gdpsvg = d3.select("#gdpgraph").append("svg")
-        .attr("width", gdpWidth)
-        .attr("height", gdpHeight)
-        .append("g");
-
-
-        var yearData = [];
-
-        // Gets all the country datas
-        for (var key in idMap) {
-          var countryName = idMap[key];
-
-          var noGDPValue = (!gdp[countryName] || !gdp[countryName][year]);
-          var noHDIValue =
-          (!hdi[countryName] || !hdi[countryName][year] ||
-          isNaN(Number(hdi[countryName][year]))) &&
-          (!hdi2[countryName] || !hdi2[countryName][year] ||
-          isNaN(Number(hdi2[countryName][year])))
-
-          // For bad countries not in our data set
-          if (noGDPValue || noHDIValue) {
-            continue;
-          }
-
-          yearData.push({
-            "name":countryName,
-            "gdp": Number(gdp[countryName][year]),
-            "hdi": (isNaN(Number(hdi[countryName][year]))? Number(hdi2[countryName][year]) :
-            Number(hdi[countryName][year]))
-
-          });
-        }
-
-        console.log(yearData[0]);
-
-        gdpX = d3.scale.log()
-        .domain(d3.extent(yearData, function(d){return Number(d["gdp"]);}))
-        .range([gdpPadding, gdpWidth-gdpPadding]);
-
-        gdpY = d3.scale.linear()
-        .domain(d3.extent(yearData, function(d){return Number(d["hdi"]);}))
-        .range([gdpHeight-gdpPadding, gdpPadding]);
-
-        gdpsvg .selectAll(".dot")
-        .data(yearData)
-        .enter().append("circle")
-        .attr("class", "dot")
-        .attr("r", 1)
-        .attr("cx", function(d){return gdpX(d["gdp"]);})
-        .attr("cy", function(d){
-        return gdpY(d["hdi"]);})
-        .style("fill", "#000");
-      }
-      }
-
 
 
     </script>
