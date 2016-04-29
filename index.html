@@ -14,7 +14,7 @@
     #country-borders {
       fill: none;
       stroke: #fff;
-      stroke-width: 1.5px;
+      stroke-width: 1px;
       stroke-linejoin: round;
       stroke-linecap: round;
       pointer-events: none;
@@ -27,6 +27,10 @@
     .axis text {font-size: 8pt;}
     table, th, td {
       border: 1px solid black;
+    }
+
+    .background {
+      fill:none;
     }
 
     .p8line {
@@ -198,7 +202,7 @@
                 .style("top", (d3.event.pageY - 85) + "px");
             })
             .on("mouseout", function(){
-                tooltip .style("opacity", 0);
+                tooltip .style("opacity", 0).style("left",0) .style("top", 0);
               });
 
         g.append("path")
@@ -208,7 +212,7 @@
 
       var legendRectSize = 14;
       var legendSpacing = 4;
-      var colors = ["#a6a6a6", "#80ff80", "#00dd00", "#008000", "#003000"].reverse();
+      var colors = ["#a6a6a6", "#85D9FF", "#2DA0E9", "#2B4FEC", "#02197D"].reverse();
       var colorNames = ["No Data", "Worst", "Bad", "Decent", "Best"].reverse();
 
       var legend = svg.selectAll('.legend')
@@ -342,13 +346,13 @@
         }
         var value = ihdi[countryName]["Ranking"];
 
-        if (value <= 25){
+        if (value <= 48){
           className = "pressedBest";
-        } else if (value > 25 && value <= 50){
+        } else if (value > 48 && value <= 100){
           className = "pressedMidHigh";
-        } else if (value > 50 && value <= 75){
+        } else if (value > 100 && value <= 140){
           className = "pressedMidLow";
-        } else if (value > 75){
+        } else if (value > 140){
           className = "pressedLow";
         }
         return className;
@@ -370,19 +374,22 @@
         $(idName).empty();
 
         var colors = {
-          'yellow': '#ffff66',
-          'green': '#00ff00',
-          'red' : '#FF0000'
+          'best': '#02197D',
+          'decent': '#2B4FEC',
+          'bad' : '#2DA0E9',
+          'worst' : '#85D9FF'
         };
 
         var color =
         function(){
-          if (end > 0.9){
-            return colors.green;
-          } else if (end > 0.75) {
-            return colors.yellow;
-          } else {
-            return colors.red;
+          if (end >= 0.818){
+            return colors.best;
+          } else if (end >= 0.717) {
+            return colors.decent;
+          } else if (end >= 0.579) {
+            return colors.bad;
+          }else {
+            return colors.worst;
           }
         }();
 

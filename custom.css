@@ -31,19 +31,19 @@ div#firstmapdata{
 }
 
 #countries .pressedBest {
-    fill: #003300;
+    fill: #02197D;
 }
 
 #countries .pressedMidHigh {
-    fill: #008000;
+    fill: #2B4FEC;
 }
 
 #countries .pressedMidLow {
-    fill: #00dd00;
+    fill: #2DA0E9;
 }
 
 #countries .pressedLow {
-    fill: #80ff80;
+    fill: #85D9FF;
 }
 
 #countries .active {
