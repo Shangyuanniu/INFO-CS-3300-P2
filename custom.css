@@ -47,7 +47,7 @@ div#firstmapdata{
 }
 
 #countries .active {
-    fill: #FF0000;
+    fill: #b3ff1a;
 }
 
 .countryLegendText {
@@ -148,7 +148,7 @@ div#firstmapdata{
 }
 
 #middlemap .active{
-    fill:#0066ff;
+    fill:#b3ff1a;
 }
 
 #middlegraph{

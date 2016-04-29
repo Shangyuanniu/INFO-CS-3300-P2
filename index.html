@@ -243,8 +243,8 @@ capitas displaying a strong, logarithmic relationship.
 
       var legendRectSize = 14;
       var legendSpacing = 4;
-      var colors = ["#a6a6a6", "#85D9FF", "#2DA0E9", "#2B4FEC", "#02197D"].reverse();
-      var colorNames = ["No Data", "Worst", "Bad", "Decent", "Best"].reverse();
+      var colors = ["#b3ff1a","#a6a6a6", "#85D9FF", "#2DA0E9", "#2B4FEC", "#02197D"].reverse();
+      var colorNames = ["Selected","No Data", "Worst", "Bad", "Decent", "Best"].reverse();
 
       var legend = svg.selectAll('.legend')
       .data(colors)
@@ -645,7 +645,7 @@ capitas displaying a strong, logarithmic relationship.
 
       var legendRectSize = 18;
       var legendSpacing = 4;
-      var colors = ["#ffb3b3", "#ff6666", "#ff0000", "#990000", "#330000", "#AAAAAA", "#0066ff"];
+      var colors = ["#ffb3b3", "#ff6666", "#ff0000", "#990000", "#330000", "#AAAAAA", "#b3ff1a"];
       var colorNames = ["Worst", "Bad", "Average", "Great", "Best", "No Data", "Selected"];
 
       var legend = svg.selectAll('.legend')
@@ -944,7 +944,7 @@ function drawbubble(year){
         .attr("text-anchor", "middle")
         .text(function(d){  return d.r>25 ? d["Country"] : ""; })
         .style({
-            "fill":"white",
+            "fill":"#f2f2f2",
             "font-size": "15px"
         });
   })
