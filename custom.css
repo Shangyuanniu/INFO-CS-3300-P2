@@ -1,13 +1,13 @@
 body {
-    font-family: "Lato",sans-serif; 
-    font-style: normal; 
-    font-weight: 300; 
+    font-family: "Lato",sans-serif;
+    font-style: normal;
+    font-weight: 300;
     margin: 40px;
 }
 
-h2{ 
+h2{
 
-    
+
 }
 
 #top {
@@ -110,7 +110,8 @@ div#firstmapdata{
 }
 
 #middle {
-    margin-top:25px;
+    margin-top:25;
+    float:left;
 }
 
 #middlemap {

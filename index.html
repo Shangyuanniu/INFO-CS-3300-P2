@@ -66,16 +66,31 @@
   <body>
     <div class="title">
       <h1>Economic Progress, Human Development, and Gender Inequality in Today's World</h1>
-      <h4>By: Net IDs</h4>
+      <h4> Exploring how human development and economic progress are intricately
+        linked using data from the United Nations and the World Bank, the authors
+        construct a series of visualizations to depict the correlated growth
+        of socio and economic factors.</h4>
+      <h4>By: Jeff Baum (jtb93), Shangyuan Niu (sn522), Yuxiao Tan (yt358)
+      </h4>
     </div>
     <div id="top">
-      <h2> World by Inequality Adjusted Human Development Index<h2>
+      <h2> World by Inequality Adjusted Human Development Index</h2>
 	      <p>
-		When the world is divided into Best, Decent, Bad, and Worst countries, as
-determined by Inequality-adjusted Human Development Index (IHDI), a measure of
-a country's development indicated by health, education, standard of living,
-and equality indicators, similarities to to the Three-World Model are
-apparent.
+        Inequality-adjusted Human Development Index (IHDI), is a measure of
+        a country's development that summarizes health, education, standard of
+        living, and equality indicators. Its inception is anchored on the work
+        of Nobel laureate Amartya Sen's work. Every year the United Nations
+        Development Programme publishes these numbers as an indicator
+        that ranks the world into four tiers of human development. <br><br>
+
+        When the world is divided into Best, Decent, Bad, and Worst countries, as
+        according to IHDI, we see a spread similar to the Three-World Model
+        extending from the Cold War. <br>
+
+        We see that the First World bloc (United States + Western Europe)
+        shares very high values of IHDI, Second World bloc (Brazil, China, India +
+        Eastern Europe) share Decent to Bad level of IHDI, and the Third World
+        block share the Worst level of IHDI.<br>
 	</p>
 
       <div id="firstmap"></div>
@@ -105,10 +120,30 @@ apparent.
     <div id = "middle">
       <h2> World by Gender Inequality Index</h2>
       <p>
-      	Gender Inequality Index (GII), a measure of the leve of gender inequality
-existing within a nation, results in a fairly similar map as IHDI.  A
-noticible difference, however, is that first world countries with large areas
-seem to be categorized with second world nations.
+      Gender Inequality Index (GII), measures gender inequalities
+      in three important aspects of human development: <br>
+      1) reproductive health, measured by maternal mortality ratio and
+      adolescent birth rates <br>
+
+      2) empowerment, measured by proportion of parliamentary seats occupied by
+      females 25+ <br>
+
+      3) female economic status, expressed as labour market participation and
+      measured by labour force participation rate of females 15 + <br> <br>
+
+      <b> Author's Note: </b> The higher a country's GII is, the <b>worse</b> its
+      gender inequality is. This is different than the IHDI, where the <b> better </b>
+      the IHDI, the more equal the country is as a whole. <br><br>
+
+      If you observe the GII graph, it resembles the IHDI graph from the
+      previous section. We conclude that gender inequality and human
+      development equality are highly correlated.<br>
+      However, we do see that for gender inequality, certain countries
+      (USA and Canada) are categorized similarly to the Second-World bloc, as
+      opposed to the First-World bloc. <br>
+      With respect to historical as well as current political context, this
+      result is not surprising.
+
 	</p>
 
       <div id = "middlemap"></div>
@@ -121,9 +156,28 @@ seem to be categorized with second world nations.
     <div id="bubble">
       <h2> GDP Bubble Chart </h2>
       <p>
-      	Historically, the United States has dominated globally in terms of Gross
-Domestic Product (GDP).  What is interesting, however, is that the GDP of a
-nation does not predict a country's GII well as the 3 dominant
+        Gross Domestic Product (GDP), measures the value of all goods and services
+        produced in a period by a country. We present to you a visualization of
+        the GDP of the main players of the world from the Cold War until the
+        modern times. <br><br>
+
+        Since after World War II, the United States have become the largest
+        GDP in the world and continues to be so up to this day. <br>
+
+        An interesting correlation to observe is the rise of BRIC (Brazil,
+        Russia, India, China) over the last 20 years. <br> These countries'
+        IHDI has risen to a value near the best of the Western countries,
+        whereas their GII has not risen. An hypothesis, proposed by a recent
+        paper by the Oxfam Foundation (studies inequality and poverty),
+        is the abundance of male labor forces. <br><br>
+
+        This is justified by our data, as we see that China does better than India in GII.
+        Limited by the One Child Policy, China's working class is waning as the
+        older generation is retiring. <br> This forces the female working class
+        to rise to compensate for the lack of the male working class. India,
+        without population control, does not share this feature. <br>
+
+
 	</p>
 
       <div id = "bubblegraph"></div>
@@ -135,13 +189,20 @@ nation does not predict a country's GII well as the 3 dominant
     </div>
 
     <div id="gdp">
-      <h2> GDP per capita vs HDI </h2>
+      <h2> Log of GDP per capita vs HDI </h2>
       <p>
-      	While historically there has always been a strong logarithmic correlation between a
-country's GDP per capita and its Human Development Index
-(Non-inequality-adjusted HDI), in more recent years this relationship
-seems to have grown even stronger, with even countries with low GDP per
-capitas displaying a strong, logarithmic relationship.  
+      Human Development Index(HDI), is the brother dataset to the IHDI dataset that
+      we have been working with throughout this visualization. It is the
+      dataset measuring pure human development, without regards to the
+      introduction (or removal) of inequality. <br><br>
+
+      When we map this dataset against the GDP of countries in the last 40 years, there
+      is a strong correlation that presents itself. <br> We see that no matter
+      which year, there is a trend of higher GDP per capita, then higher HDI.
+      However, in recent years, we see that the correlation grows stronger. <br> We
+      observe this due to the fact that the points cluster more onto a line and
+      the value of deviation from the best-fit line is much smaller than previous.
+
 	</p>
       <div id = "gdpgraph"></div>
       <div id = "gdpsliderwrap">
@@ -149,6 +210,31 @@ capitas displaying a strong, logarithmic relationship.
         <div id="amount">1975</div>
         <div id="slider-range"></div>
       </div>
+    </div>
+
+    <div id="conclusion">
+      <h2> Conclusion </h2>
+      <p>
+      In conclusion, we have shown with our multitude of datasets that
+      human development, human equality, and gender equality, are all highly
+      correlated to the GDPs of countries. <br><br>
+
+      With high economic growth comes a high demand for a middle and working
+      class, and thus a higher demand for intelligence, regardless of
+      upbringing, gender, and socioeconomic status at birth. <br>
+
+      There were three main points we strived to present throughout our
+      visualizations: <br><br>
+      1) Cold War Era designation of the Three-World Bloc continues to
+      influence the human inequality to this day (despite 26 years after the
+      fall of USSR)<br>
+      2) Gender Inequality is correlated to the Cold War Era split, but also
+      correlated to regional politics (USA/Canada less gender friendly than
+      Western Europe) <br>
+      3) Over time, countries get better and better in terms
+      of gender equality, as long as their GDP continues to grow <br>
+
+      </p>
     </div>
     <script>
 
@@ -643,8 +729,8 @@ capitas displaying a strong, logarithmic relationship.
 
       var legendRectSize = 18;
       var legendSpacing = 4;
-      var colors = ["#ffb3b3", "#ff6666", "#ff0000", "#990000", "#330000", "#AAAAAA", "#0066ff"];
-      var colorNames = ["Worst", "Bad", "Average", "Great", "Best", "No Data", "Selected"];
+      var colors = ["#AAAAAA", "#ffb3b3", "#ff6666", "#ff0000", "#990000", "#330000"].reverse();
+      var colorNames = ["No Data", "Worst", "Bad", "Average", "Great", "Best"].reverse();
 
       var legend = svg.selectAll('.legend')
       .data(colors)
@@ -829,7 +915,7 @@ capitas displaying a strong, logarithmic relationship.
         .attr("transform", "rotate(90)")
         .style("text-anchor", "start");
 
-        gdpsvg.append("text").attr("x", gdpWidth/3 - gdpPadding).attr("y", gdpHeight- (1.0/4)*gdpPadding).text("GDP per Capita in USD").attr("class", "label");
+        gdpsvg.append("text").attr("x", gdpWidth/3 - gdpPadding).attr("y", gdpHeight- (1.0/4)*gdpPadding).text("Log of GDP per Capita in USD").attr("class", "label");
 
 
         gdpsvg.append("text").attr("x", 10).attr("y", gdpHeight/2)
