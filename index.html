@@ -97,7 +97,8 @@
       <div id="firstmapdata">
         <!-- FMD means FirstMapData -->
         <div id="fmd_title">
-          Click on many countries!
+          <p>Click on the countries to discover their color values in the choropleth!</p>
+          <p style = "font-size:15px">If you get tired, just turn on the "Show all" switch.</p>
         </div>
 
         <div id= "fmd_ranking"></div>
@@ -150,6 +151,7 @@
       <div id = "middlegraph">
         <h3> Gender Inequality Scores</h3>
         <p> Smaller means less inequality.</p>
+        <p>Click on different contires to add them to the bar chart!</p>
       </div>
     </div>
 
@@ -238,14 +240,14 @@
     </div>
     <script>
 
-    var width = 740,
-    height = 550,
+    var width = 900,
+    height = 600,
     centered;
 
     var q = queue(4);
 
     var projection = d3.geo.mercator()
-    .scale(125)
+    .scale(150)
     .translate([width/2, height/2])
     ;
 
@@ -327,8 +329,8 @@
 
       var legendRectSize = 14;
       var legendSpacing = 4;
-      var colors = ["#a6a6a6", "#85D9FF", "#2DA0E9", "#2B4FEC", "#02197D"].reverse();
-      var colorNames = ["No Data", "Worst", "Bad", "Decent", "Best"].reverse();
+      var colors = ["#b3ff1a","#a6a6a6", "#85D9FF", "#2DA0E9", "#2B4FEC", "#02197D"].reverse();
+      var colorNames = ["Selected","No Data", "Worst", "Bad", "Decent", "Best"].reverse();
 
       var legend = svg.selectAll('.legend')
       .data(colors)
@@ -731,7 +733,6 @@
       var legendSpacing = 4;
       var colors = ["#AAAAAA", "#ffb3b3", "#ff6666", "#ff0000", "#990000", "#330000"].reverse();
       var colorNames = ["No Data", "Worst", "Bad", "Average", "Great", "Best"].reverse();
-
       var legend = svg.selectAll('.legend')
       .data(colors)
       .enter()
@@ -1028,7 +1029,7 @@ function drawbubble(year){
         .attr("text-anchor", "middle")
         .text(function(d){  return d.r>25 ? d["Country"] : ""; })
         .style({
-            "fill":"white",
+            "fill":"#f2f2f2",
             "font-size": "15px"
         });
   })
