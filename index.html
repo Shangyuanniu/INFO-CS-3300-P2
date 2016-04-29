@@ -614,7 +614,7 @@
 
       var legendRectSize = 18;
       var legendSpacing = 4;
-      var colors = ["#FF0000", "#FF9000", "#D0FF00", "#80FF00", "#00FF00", "#000000", "#0066ff"];
+      var colors = ["#ffb3b3", "#ff6666", "#ff0000", "#990000", "#330000", "#AAAAAA", "#0066ff"];
       var colorNames = ["Worst", "Bad", "Average", "Great", "Best", "No Data", "Selected"];
 
       var legend = svg.selectAll('.legend')
@@ -684,7 +684,7 @@
        .ease("quad")
        .attr("width", x)
        .style("width", function(d) { return x(Number(d["2014"])+0.1) + "px"; })
-       .text(function(d) { return d["Country"] + ":" + d["2014"]; });
+       .text(function(d) { return d["Country"] + ":" + d["2014"]; }).style("color","white");
      }
 
      function giiClick(d){

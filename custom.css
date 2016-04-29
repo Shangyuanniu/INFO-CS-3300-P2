@@ -91,6 +91,10 @@ div#firstmapdata{
     font-size:75%;
 }
 
+.none{
+    fill:#AAAAAA;
+}
+
 .hdiLine{
     fill:none;
     stroke: red;
@@ -119,28 +123,28 @@ div#firstmapdata{
 }
 
 .worstGII{
-    fill: #FF0000;
-    background: #FF0000;
+    fill: #ffb3b3;
+    background: #ffb3b3;
 }
 
 .badGII{
-    fill: #FF9000;
-    background: #FF9000;
+    fill: #ff6666;
+    background: #ff6666;
 }
 
 .averageGII{
-    fill:#D0FF00;
-    background:#D0FF00;
+    fill:#ff0000;
+    background:#ff0000;
 }
 
 .greatGII{
-    fill:#80FF00;
-    background:#80FF00;
+    fill:#990000;
+    background:#990000;
 }
 
 .bestGII{
-    fill:#00FF00;
-    background:#00FF00;
+    fill:#330000;
+    background:#330000;
 }
 
 #middlemap .active{
@@ -148,7 +152,7 @@ div#firstmapdata{
 }
 
 #middlegraph{
-    margin-left:910px;
+    margin-left:960px;
     width:500;
 }
 
